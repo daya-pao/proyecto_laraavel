@@ -18,6 +18,11 @@ class MascotaFactory extends Factory
     {
         return [
             //
+            'name' => fake()->name(),
+            'fechaNacimiento'=>fake()->date(),
+            'user_id'=>fake()->user()->id,
+            'tipo_mascota_id'=>(string) rand(0,0),
+            'role_id'=>(string) rand(0,0),
         ];
     }
 }

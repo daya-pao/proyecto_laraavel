@@ -19,7 +19,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre',50);
             $table->date('FechaNacimiento');
-            $table->string('foto',250);
+            $table->string('foto',250)->nullable();
             $table->foreignIdFor(User::class)->constrained();
             $table->foreignIdFor(TipoMascota::class)->constrained();
             $table->foreignIdFor(Raza::class)->constrained();
